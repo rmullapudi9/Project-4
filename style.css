@@ -1,17 +1,24 @@
 @font-face {
-  font-family: 'N27';
-  src: url('N27-Regular.otf') format('otf'),
-       url('N27-RegularItalic.otf') format('otf');
+  font-family: "N27";
+  src: url("N27-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "N27";
+  src: url("N27-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
 
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%; /* Ensure the body takes full viewport height */
-  font-family: 'N27', monospace;
+  font-family: "N27", monospace;
 }
 
 .grid-container {
@@ -497,9 +504,9 @@ input::-webkit-slider-thumb {
   flex-direction: column;
   justify-content: flex-start;
   flex-shrink: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   overflow-y: auto;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   width: 880px;
   height: 425px;
   top: -100%;
@@ -577,42 +584,61 @@ input::-webkit-slider-thumb {
   }
 }
 
-
 @media only screen and (max-width: 650px) {
-
   .grid-container {
     grid-template-columns: 1fr; /* Single column layout */
     grid-template-rows: repeat(10, auto); /* Adjust number of rows as needed */
   }
 
-  #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10 {
+  #item1,
+  #item2,
+  #item3,
+  #item4,
+  #item5,
+  #item6,
+  #item7,
+  #item8,
+  #item9,
+  #item10 {
     grid-column: 1; /* All items take the full width of the single column */
     grid-row: auto; /* Each item takes up as much space as it needs */
   }
 
-  .wrapper-one, .wrapper-two, .wrapper-three, .wrapper-four,
-  .wrapper-five, .wrapper-six, .wrapper-seven, .wrapper-eight,
-  .wrapper-nine, .wrapper-ten {
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three,
+  .wrapper-four,
+  .wrapper-five,
+  .wrapper-six,
+  .wrapper-seven,
+  .wrapper-eight,
+  .wrapper-nine,
+  .wrapper-ten {
     transform: rotate(0deg); /* Reset rotation for vertical alignment */
     width: 90%; /* Adjust width to fit within the grid item */
     margin: 10px auto; /* Center within the grid item */
   }
 
-  .wrapper-one input, .wrapper-two input, .wrapper-three input,
-  .wrapper-four input, .wrapper-five input, .wrapper-six input,
-  .wrapper-seven input, .wrapper-eight input, .wrapper-nine input,
+  .wrapper-one input,
+  .wrapper-two input,
+  .wrapper-three input,
+  .wrapper-four input,
+  .wrapper-five input,
+  .wrapper-six input,
+  .wrapper-seven input,
+  .wrapper-eight input,
+  .wrapper-nine input,
   .wrapper-ten input {
     height: 30px; /* Increase height for better touch interaction */
   }
 
   .main,
-  .sub
- {
+  .sub {
     /* Adjust font sizes for smaller screens */
     font-size: smaller; /* Adjust as needed */
   }
 
-  .sub2{
+  .sub2 {
     font-size: 50px;
   }
 
@@ -620,7 +646,7 @@ input::-webkit-slider-thumb {
     height: 325px;
   }
 
-  .title{
+  .title {
     font-size: 50px;
   }
 
@@ -638,6 +664,4 @@ input::-webkit-slider-thumb {
     height: 30px;
     width: 30px;
   }
-
-  
 }
