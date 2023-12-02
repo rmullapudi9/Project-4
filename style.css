@@ -1,16 +1,17 @@
 @font-face {
   font-family: "N27";
-  src: url("N27-Regular.woff") format("woff");
+  src: url("N27-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "N27";
-  src: url("N27-RegularItalic.woff") format("woff");
+  src: url("N27-RegularItalic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
 }
+
 
 
 html,
