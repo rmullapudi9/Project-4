@@ -624,5 +624,20 @@ input::-webkit-slider-thumb {
     font-size: 50px;
   }
 
+  .wrapper-one input::-webkit-slider-thumb,
+  .wrapper-two input::-webkit-slider-thumb,
+  .wrapper-three input::-webkit-slider-thumb,
+  .wrapper-four input::-webkit-slider-thumb,
+  .wrapper-five input::-webkit-slider-thumb,
+  .wrapper-six input::-webkit-slider-thumb,
+  .wrapper-seven input::-webkit-slider-thumb,
+  .wrapper-eight input::-webkit-slider-thumb,
+  .wrapper-nine input::-webkit-slider-thumb,
+  .wrapper-ten input::-webkit-slider-thumb {
+    appearance: none;
+    height: 30px;
+    width: 30px;
+  }
+
   
 }
