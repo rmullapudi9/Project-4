@@ -633,7 +633,11 @@ input::-webkit-slider-thumb {
     height: 30px; /* Increase height for better touch interaction */
   }
 
-  .main,
+  .main {
+    /* Adjust font sizes for smaller screens */
+    font-size: 20px; /* Adjust as needed */
+  }
+
   .sub {
     /* Adjust font sizes for smaller screens */
     font-size: smaller; /* Adjust as needed */
@@ -665,4 +669,42 @@ input::-webkit-slider-thumb {
     height: 30px;
     width: 30px;
   }
+
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three,
+  .wrapper-four,
+  .wrapper-five,
+  .wrapper-six,
+  .wrapper-seven,
+  .wrapper-eight,
+  .wrapper-nine,
+  .wrapper-ten {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+
+
+@media only screen and (max-width: 428px) {
+  
+  .main {
+    /* Adjust font sizes for smaller screens */
+    font-size: 20px; /* Adjust as needed */
+  }
+
+  .sub {
+    /* Adjust font sizes for smaller screens */
+    font-size: smaller; /* Adjust as needed */
+  }
+
+  .sub2 {
+    font-size: 35px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
 }
