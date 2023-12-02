@@ -1,0 +1,567 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes full viewport height */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(
+    5,
+    1fr
+  ); /* Define rows to be equally distributed */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  gap: 0; /* No space between grid items */
+}
+
+/* Assigning the grid items to specific areas */
+#item1 {
+  grid-area: 1 / 1 / 8 / 2;
+}
+#item2 {
+  grid-area: 1 / 2 / 2 / 8;
+}
+#item3 {
+  grid-area: 1 / 8 / 5 / 9;
+}
+#item4 {
+  grid-area: 2 / 2 / 6 / 2;
+}
+#item5 {
+  grid-area: 2 / 3 / 5 / 4;
+}
+#item6 {
+  grid-area: 2 / 4 / 3 / 6;
+}
+#item7 {
+  grid-area: 2 / 6 / 5 / 8;
+}
+#item8 {
+  grid-area: 3 / 4 / 5 / 6;
+}
+#item9 {
+  grid-area: 5 / 2 / 8 / 7;
+}
+#item10 {
+  grid-area: 5 / 7 / 8 / 9;
+}
+
+.grid-item {
+  background-color: #ff0101; /* As seen in the image */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black; /* Keeping the borders to distinguish the divs */
+}
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/*SLIDER 1*/
+.wrapper-one {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  transform: rotate(90deg);
+}
+
+.wrapper-one input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 18px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*SLIDER 3*/
+.wrapper-three {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  transform: rotate(-90deg);
+}
+
+.wrapper-three input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-three input::-webkit-slider-thumb {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 4*/
+.wrapper-four {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  transform: rotate(90deg);
+}
+
+.wrapper-four input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-four input::-webkit-slider-thumb {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 5*/
+.wrapper-five {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  transform: rotate(-90deg);
+}
+
+.wrapper-five input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-five input::-webkit-slider-thumb {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 7*/
+.wrapper-seven {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+  transform: rotate(90deg);
+}
+
+.wrapper-seven input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-seven input::-webkit-slider-thumb {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 2*/
+.wrapper-two {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+}
+
+.wrapper-two input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-two input::-webkit-slider-thumb {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 6*/
+.wrapper-six {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+}
+
+.wrapper-six input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 80%;
+  border-radius: 500px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-six input::-webkit-slider-thumb {
+  appearance: none;
+  height: 105px;
+  width: 105px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 8*/
+.wrapper-eight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 1000px;
+  background: #d9d9d9;
+}
+
+.wrapper-eight input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 85%;
+  border-radius: 1000px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-eight input::-webkit-slider-thumb {
+  appearance: none;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 9*/
+.wrapper-nine {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  margin: 0 15px;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+}
+
+.wrapper-nine input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 85%;
+  border-radius: 500px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-nine input::-webkit-slider-thumb {
+  appearance: none;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+/*SLIDER 10*/
+.wrapper-ten {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  margin: 0 15px;
+  width: 80%;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: #d9d9d9;
+}
+
+.wrapper-ten input {
+  position: relative;
+  width: 100%;
+  margin: 0 10px;
+  appearance: none;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wrapper-ten input::-webkit-slider-thumb {
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #d9d9d9;
+  box-shadow: -208px 0 0 200px black;
+}
+
+.text-box {
+  position: fixed;
+  display: flex;
+  width: 1130px;
+  height: 350px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: auto;
+  bottom: -100%; /* Start off the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Set the width as required */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: bottom 0.5s ease; /* Smooth transition for the bottom property */
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.main {
+  color: blue;
+  font-family: N27;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 112.8%; /* 62.04px */
+}
+
+.sub {
+  color: blue;
+  font-family: N27;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 112.8%;
+}
+
+#titleTextBox {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 870px;
+  height: 500px;
+  overflow: auto;
+  top: -100%; /* Initially offscreen to the left */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Set the width as required */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: top 0.5s ease; /* Smooth transition for the bottom property */
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.sub2 {
+  color: blue;
+  font-family: N27;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 112.8%; /* 84.07px */
+}
+
+.title {
+  color: blue;
+  font-family: N27;
+  font-size: 200px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+/* CSS for the printable class */
+.printable {
+  /* The printable class ensures the textbox appears when printing */
+}
+
+@media print {
+  body,
+  html {
+    height: auto;
+    overflow: visible;
+  }
+
+  .wrapper-one,
+  .wrapper-two,
+  .wrapper-three,
+  .wrapper-four,
+  .wrapper-five,
+  .wrapper-six,
+  .wrapper-seven,
+  .wrapper-eight,
+  .wrapper-nine,
+  .wrapper-ten,
+  .grid-item,
+  .text-box,
+  #titleTextBox {
+    /* display: none; */
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  #titleTextBox, .text-box {
+    background: rgba(217, 217, 217, 0.5);
+
+  }
+
+  /* When printing, only show the textbox if it has the printable class */
+  #textBox:not(.printable) {
+    display: none !important;
+  }
+}
