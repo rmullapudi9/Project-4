@@ -488,9 +488,11 @@ input::-webkit-slider-thumb {
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  width: 870px;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  word-wrap: break-word; 
+  width: 880px;
   height: 500px;
-  overflow: auto;
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
@@ -555,13 +557,99 @@ input::-webkit-slider-thumb {
     color-adjust: exact;
   }
 
-  #titleTextBox, .text-box {
+  #titleTextBox,
+  .text-box {
     background: rgba(217, 217, 217, 0.5);
-
   }
 
   /* When printing, only show the textbox if it has the printable class */
   #textBox:not(.printable) {
     display: none !important;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(10, auto); /* Adjust number of rows as needed */
+  }
+
+  #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10 {
+    grid-column: 1; /* All items take the full width of the single column */
+    grid-row: auto; /* Each item takes up as much space as it needs */
+  }
+
+  .wrapper-one, .wrapper-two, .wrapper-three, .wrapper-four,
+  .wrapper-five, .wrapper-six, .wrapper-seven, .wrapper-eight,
+  .wrapper-nine, .wrapper-ten {
+    transform: rotate(0deg); /* Reset rotation for vertical alignment */
+    width: 90%; /* Adjust width to fit within the grid item */
+    margin: 10px auto; /* Center within the grid item */
+  }
+
+  .wrapper-one input, .wrapper-two input, .wrapper-three input,
+  .wrapper-four input, .wrapper-five input, .wrapper-six input,
+  .wrapper-seven input, .wrapper-eight input, .wrapper-nine input,
+  .wrapper-ten input {
+    height: 30px; /* Increase height for better touch interaction */
+  }
+
+  .main,
+  .sub
+ {
+    /* Adjust font sizes for smaller screens */
+    font-size: smaller; /* Adjust as needed */
+  }
+
+  .sub2{
+    font-size: 50px;
+  }
+
+  .title{
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+.grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(10, auto); /* Adjust number of rows as needed */
+  }
+
+  #item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8, #item9, #item10 {
+    grid-column: 1; /* All items take the full width of the single column */
+    grid-row: auto; /* Each item takes up as much space as it needs */
+  }
+
+  .wrapper-one, .wrapper-two, .wrapper-three, .wrapper-four,
+  .wrapper-five, .wrapper-six, .wrapper-seven, .wrapper-eight,
+  .wrapper-nine, .wrapper-ten {
+    transform: rotate(0deg); /* Reset rotation for vertical alignment */
+    width: 90%; /* Adjust width to fit within the grid item */
+    margin: 10px auto; /* Center within the grid item */
+  }
+
+  .wrapper-one input, .wrapper-two input, .wrapper-three input,
+  .wrapper-four input, .wrapper-five input, .wrapper-six input,
+  .wrapper-seven input, .wrapper-eight input, .wrapper-nine input,
+  .wrapper-ten input {
+    height: 30px; /* Increase height for better touch interaction */
+  }
+
+  .main,
+  .sub
+ {
+    /* Adjust font sizes for smaller screens */
+    font-size: smaller; /* Adjust as needed */
+  }
+
+  .sub2{
+    font-size: 50px;
+  }
+
+  .title{
+    font-size: 80px;
   }
 }

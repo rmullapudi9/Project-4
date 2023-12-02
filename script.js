@@ -400,4 +400,3 @@ document.addEventListener("DOMContentLoaded", function () {
     textBox.style.top = topPosition;
   });
 });
-
