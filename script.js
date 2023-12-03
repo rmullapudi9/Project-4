@@ -358,8 +358,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.getElementById("slider4");
 
@@ -396,5 +394,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Set the style for the text box to move it into position
     textBox.style.top = topPosition;
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('slider2');
+  const grainEffect = document.getElementById('grainEffect');
+
+  slider.addEventListener('input', function() {
+      const sliderValue = this.value;
+      const opacity = sliderValue / 100;
+      grainEffect.style.opacity = opacity;
   });
 });
