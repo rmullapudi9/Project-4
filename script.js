@@ -205,99 +205,113 @@ slider.addEventListener("input", function () {
   }
 });
 
-//   document.addEventListener('DOMContentLoaded', function() {
-//     var slider = document.getElementById('slider9');
-//     var itemDivs = document.querySelectorAll('.grid-container > div');
-//     var originalSizes = {};
 
-//     // Store the original sizes and positions of the item and wrapper divs
-//     itemDivs.forEach(function(div) {
-//         var wrapDiv = div.querySelector('div');
-//         originalSizes[div.id] = {
-//             width: div.offsetWidth,
-//             height: div.offsetHeight,
-//             gridArea: div.style.gridArea,
-//             wrapWidth: wrapDiv.offsetWidth,
-//             wrapHeight: wrapDiv.offsetHeight
-//         };
-//     });
 
-//     function resetDivs() {
-//         // Reset all divs to their original size and position
-//         for (let id in originalSizes) {
-//             var itemDiv = document.getElementById(id);
-//             var wrapDiv = itemDiv.querySelector('div');
-//             itemDiv.style.width = originalSizes[id].width + 'px';
-//             itemDiv.style.height = originalSizes[id].height + 'px';
-//             itemDiv.style.gridArea = originalSizes[id].gridArea; // Reset the position
-//             wrapDiv.style.width = originalSizes[id].wrapWidth + 'px';
-//             wrapDiv.style.height = originalSizes[id].wrapHeight + 'px';
-//         }
+// document.addEventListener("DOMContentLoaded", function () {
+//   var slider = document.getElementById("slider9");
+//   var itemDivs = document.querySelectorAll(".grid-container > div");
+//   var originalSizes = {};
+
+//   // Store the original sizes of the item and wrapper divs
+//   itemDivs.forEach(function (div) {
+//     var wrapDiv = div.querySelector("div");
+//     originalSizes[div.id] = {
+//       width: div.offsetWidth,
+//       height: div.offsetHeight,
+//       wrapWidth: wrapDiv.offsetWidth,
+//       wrapHeight: wrapDiv.offsetHeight,
+//     };
+//   });
+
+//   slider.addEventListener("input", function () {
+//     var sliderValue = parseInt(this.value, 10);
+//     var scaleFactor = sliderValue / 100;
+
+//     // Reset to original sizes if the slider is at the start
+//     if (sliderValue === 0) {
+//       for (let id in originalSizes) {
+//         var itemDiv = document.getElementById(id);
+//         var wrapDiv = itemDiv.querySelector("div");
+//         itemDiv.style.width = originalSizes[id].width + "px";
+//         itemDiv.style.height = originalSizes[id].height + "px";
+//         wrapDiv.style.width = originalSizes[id].wrapWidth + "px";
+//         wrapDiv.style.height = originalSizes[id].wrapHeight + "px";
+//       }
+//     } else {
+//       // Adjust sizes randomly based on the slider value
+//       itemDivs.forEach(function (div) {
+//         var randomWidthScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original width
+//         var randomHeightScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original height
+
+//         var newWidth = originalSizes[div.id].width * randomWidthScale;
+//         var newHeight = originalSizes[div.id].height * randomHeightScale;
+
+//         // Set new sizes for the item div
+//         div.style.width = newWidth + "px";
+//         div.style.height = newHeight + "px";
+
+//         // Set new sizes for the child wrapper div proportionally
+//         var wrapDiv = div.querySelector("div");
+//         var wrapWidthScale = newWidth / originalSizes[div.id].width;
+//         var wrapHeightScale = newHeight / originalSizes[div.id].height;
+
+//         wrapDiv.style.width =
+//           originalSizes[div.id].wrapWidth * wrapWidthScale + "px";
+//         wrapDiv.style.height =
+//           originalSizes[div.id].wrapHeight * wrapHeightScale + "px";
+//       });
 //     }
-
-//     slider.addEventListener('input', function() {
-//         var sliderValue = parseInt(this.value, 10);
-//         var scaleFactor = sliderValue / 100;
-
-//         // Reset to original sizes and positions if the slider is at the start
-//         if (sliderValue === 0) {
-//             resetDivs();
-//         } else {
-//             // Adjust sizes randomly based on the slider value
-//             itemDivs.forEach(function(div) {
-//                 var randomWidthScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original width
-//                 var randomHeightScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original height
-
-//                 var newWidth = originalSizes[div.id].width * randomWidthScale;
-//                 var newHeight = originalSizes[div.id].height * randomHeightScale;
-
-//                 // Set new sizes for the item div
-//                 div.style.width = newWidth + 'px';
-//                 div.style.height = newHeight + 'px';
-
-//                 // Set new sizes for the child wrapper div proportionally
-//                 var wrapDiv = div.querySelector('div');
-//                 var wrapWidthScale = newWidth / originalSizes[div.id].width;
-//                 var wrapHeightScale = newHeight / originalSizes[div.id].height;
-
-//                 wrapDiv.style.width = originalSizes[div.id].wrapWidth * wrapWidthScale + 'px';
-//                 wrapDiv.style.height = originalSizes[div.id].wrapHeight * wrapHeightScale + 'px';
-//             });
-//         }
-//     });
-
-//     // Check the slider value before printing
-//     window.addEventListener('beforeprint', function() {
-//         if (slider.value === '0') {
-//             resetDivs();
-//         }
-//     });
-
-//     // Intercept the print command
-//     document.addEventListener('keydown', function(event) {
-//         if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
-//             event.preventDefault();
-//             if (slider.value === '0') {
-//                 resetDivs();
-//             }
-//             window.print();
-//         }
-//     });
+//   });
 // });
+
+
+// slider.addEventListener("input", function () {
+//   var sliderValue = parseInt(this.value, 10);
+//   var scaleFactor = sliderValue / 100;
+
+//   // Reset to original sizes if the slider is at the start
+//   if (sliderValue === 0) {
+//       itemDivs.forEach(function (div) {
+//           var wrapDiv = div.querySelector("div");
+//           div.style.width = originalSizes[div.id].width + "px";
+//           div.style.height = originalSizes[div.id].height + "px";
+//           wrapDiv.style.width = originalSizes[div.id].wrapWidth + "px";
+//           wrapDiv.style.height = originalSizes[div.id].wrapHeight + "px";
+//       });
+//   } else {
+//       // Adjust sizes randomly based on the slider value
+//       itemDivs.forEach(function (div) {
+//           var randomFactor = Math.random() * (1.5 - 0.5) + 0.5; // Random factor between 0.5 and 1.5
+//           var newWidth = originalSizes[div.id].width * randomFactor * scaleFactor;
+//           var newHeight = originalSizes[div.id].height * randomFactor * scaleFactor;
+
+//           // Set new sizes for the item div
+//           div.style.width = newWidth + "px";
+//           div.style.height = newHeight + "px";
+
+//           // Set new sizes for the child wrapper div proportionally
+//           var wrapDiv = div.querySelector("div");
+//           wrapDiv.style.width = newWidth + "px";
+//           wrapDiv.style.height = newHeight + "px";
+//       });
+//   }
+// });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.getElementById("slider9");
   var itemDivs = document.querySelectorAll(".grid-container > div");
   var originalSizes = {};
 
-  // Store the original sizes of the item and wrapper divs
+  // Store the original sizes of the item divs
   itemDivs.forEach(function (div) {
     var wrapDiv = div.querySelector("div");
     originalSizes[div.id] = {
       width: div.offsetWidth,
       height: div.offsetHeight,
-      wrapWidth: wrapDiv.offsetWidth,
-      wrapHeight: wrapDiv.offsetHeight,
+      wrapWidth: wrapDiv ? wrapDiv.offsetWidth : 0,
+      wrapHeight: wrapDiv ? wrapDiv.offsetHeight : 0
     };
   });
 
@@ -305,42 +319,46 @@ document.addEventListener("DOMContentLoaded", function () {
     var sliderValue = parseInt(this.value, 10);
     var scaleFactor = sliderValue / 100;
 
-    // Reset to original sizes if the slider is at the start
     if (sliderValue === 0) {
-      for (let id in originalSizes) {
-        var itemDiv = document.getElementById(id);
-        var wrapDiv = itemDiv.querySelector("div");
-        itemDiv.style.width = originalSizes[id].width + "px";
-        itemDiv.style.height = originalSizes[id].height + "px";
-        wrapDiv.style.width = originalSizes[id].wrapWidth + "px";
-        wrapDiv.style.height = originalSizes[id].wrapHeight + "px";
-      }
+      // Reset to original sizes and positions if the slider is at the start
+      itemDivs.forEach(function (div) {
+        div.style.width = '';
+        div.style.height = '';
+        var wrapDiv = div.querySelector("div");
+        if (wrapDiv) {
+          wrapDiv.style.width = '';
+          wrapDiv.style.height = '';
+        }
+      });
     } else {
       // Adjust sizes randomly based on the slider value
       itemDivs.forEach(function (div) {
-        var randomWidthScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original width
-        var randomHeightScale = Math.random() * scaleFactor + 0.5; // 50% to 150% of original height
+        var randomFactor = Math.random() * scaleFactor + 0.5; // Random factor between 0.5 and 1.5
 
-        var newWidth = originalSizes[div.id].width * randomWidthScale;
-        var newHeight = originalSizes[div.id].height * randomHeightScale;
+        // Calculate new sizes for the item div
+        var newWidth = originalSizes[div.id].width * randomFactor;
+        var newHeight = originalSizes[div.id].height * randomFactor;
 
         // Set new sizes for the item div
-        div.style.width = newWidth + "px";
-        div.style.height = newHeight + "px";
+        div.style.width = newWidth + 'px';
+        div.style.height = newHeight + 'px';
 
         // Set new sizes for the child wrapper div proportionally
         var wrapDiv = div.querySelector("div");
-        var wrapWidthScale = newWidth / originalSizes[div.id].width;
-        var wrapHeightScale = newHeight / originalSizes[div.id].height;
+        if (wrapDiv) {
+          var wrapWidthScale = newWidth / originalSizes[div.id].width;
+          var wrapHeightScale = newHeight / originalSizes[div.id].height;
 
-        wrapDiv.style.width =
-          originalSizes[div.id].wrapWidth * wrapWidthScale + "px";
-        wrapDiv.style.height =
-          originalSizes[div.id].wrapHeight * wrapHeightScale + "px";
+          wrapDiv.style.width = originalSizes[div.id].wrapWidth * wrapWidthScale + 'px';
+          wrapDiv.style.height = originalSizes[div.id].wrapHeight * wrapHeightScale + 'px';
+        }
       });
     }
   });
 });
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.getElementById("slider4");
@@ -354,26 +372,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var slider = document.getElementById('slider2');
-//     var textBox = document.getElementById('titleTextBox'); // The text box with the ID 'titleTextBox'
-
-//     slider.addEventListener('input', function() {
-//         var sliderValue = this.value;
-//         var maxSliderValue = this.max;
-
-//         // Calculate the percentage of the slider's position
-//         var percentage = sliderValue / maxSliderValue;
-
-//         // Calculate the position of the text box based on the slider's percentage
-//         // The starting position of the text box is offscreen to the left (-100% of its width)
-//         // The ending position is in the middle of the screen
-//         var leftPosition = percentage === 1 ? '50%' : percentage === 0 ? '-100%' : '0';
-
-//         // Set the style for the text box to move it into position using Flexbox
-//         textBox.style.left = leftPosition;
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   var slider = document.getElementById("slider1");
