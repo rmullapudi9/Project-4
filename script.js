@@ -218,7 +218,7 @@ slider.addEventListener("input", function () {
 // SLIDER 9 SIZE
 
 document.addEventListener("DOMContentLoaded", function () {
-  var slider = document.getElementById("slider9");
+  var slider = document.getElementById("slider2");
   var itemDivs = document.querySelectorAll(".grid-container > div");
   var originalSizes = {};
 
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listener for the slider
-  const slider = document.getElementById("slider2");
+  const slider = document.getElementById("slider9");
   slider.addEventListener("input", function () {
     if (this.value == 0) {
       // Restore original grid areas
@@ -405,9 +405,78 @@ document.addEventListener("DOMContentLoaded", function () {
   items.forEach((item) => {
     item.style.gridArea = originalGridAreas[item.id];
   });
-
 });
 
+// -------------------------------------------------------------------
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const originalGridAreas = {};
+//   const items = document.querySelectorAll('.grid-container > .grid-item');
+
+//   // Store the original grid-areas
+//   items.forEach((item) => {
+//     originalGridAreas[item.id] = getComputedStyle(item).gridArea;
+//   });
+
+//   // Function to set grid areas randomly
+//   function setPuzzleGrid() {
+//     const rows = 5;
+//     const columns = 8;
+//     let grid = [...Array(rows)].map(() => Array(columns).fill(0));
+
+//     // Check if the area is free
+//     function isAreaFree(row, col, height, width) {
+//       for (let i = 0; i < height; i++) {
+//         for (let j = 0; j < width; j++) {
+//           if (grid[row + i] === undefined || grid[row + i][col + j] !== 0) {
+//             return false;
+//           }
+//         }
+//       }
+//       return true;
+//     }
+
+//     // Mark the area as filled
+//     function fillArea(item, row, col, height, width) {
+//       for (let i = 0; i < height; i++) {
+//         for (let j = 0; j < width; j++) {
+//           grid[row + i][col + j] = 1;
+//         }
+//       }
+//       item.style.gridArea = `${row + 1} / ${col + 1} / span ${height} / span ${width}`;
+//     }
+
+//     // Arrange items as puzzle pieces based on the slider value
+//     items.forEach((item) => {
+//       let placed = false;
+//       while (!placed) {
+//         let row = Math.floor(Math.random() * rows);
+//         let col = Math.floor(Math.random() * columns);
+//         // Randomly decide the height and width for each item
+//         let height = Math.floor(Math.random() * 2) + 1;
+//         let width = Math.floor(Math.random() * 2) + 1;
+//         if (isAreaFree(row, col, height, width)) {
+//           fillArea(item, row, col, height, width);
+//           placed = true;
+//         }
+//       }
+//     });
+//   }
+
+//   // Event listener for the slider
+//   const slider = document.getElementById("slider2");
+//   slider.addEventListener("input", function () {
+//     if (this.value == 0) {
+//       // Restore original grid areas
+//       items.forEach((item) => {
+//         item.style.gridArea = originalGridAreas[item.id];
+//       });
+//     } else {
+//       // Set new grid areas
+//       setPuzzleGrid();
+//     }
+//   });
+// });
 
 
     //------------------------------------------------------------
