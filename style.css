@@ -740,6 +740,20 @@ body {
   .wrapper-nine input,
   .wrapper-ten input {
     height: 30px; /* Increase height for better touch interaction */
+    width: 100%;
+  }
+
+  .wrapper-one input::-webkit-slider-thumb,
+  .wrapper-two input::-webkit-slider-thumb,
+  .wrapper-three input::-webkit-slider-thumb,
+  .wrapper-four input::-webkit-slider-thumb,
+  .wrapper-five input::-webkit-slider-thumb,
+  .wrapper-six input::-webkit-slider-thumb,
+  .wrapper-seven input::-webkit-slider-thumb,
+  .wrapper-eight input::-webkit-slider-thumb,
+  .wrapper-nine input::-webkit-slider-thumb,
+  .wrapper-ten input::-webkit-slider-thumb {
+    box-shadow: -520px 0 0 500px black;
   }
 
   .main {
