@@ -399,12 +399,12 @@ body {
 
 .wrapper-eight input::-webkit-slider-thumb {
   appearance: none;
-  height: 100px;
-  width: 100px;
+  height: 245px;
+  width: 245px;
   border-radius: 50%;
   border: 1px solid black;
   background-color: #d9d9d9;
-  box-shadow: -400px 0 0 400px black;
+  box-shadow: -500px 0 0 400px black;
 }
 
 /*SLIDER 9*/
